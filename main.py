@@ -19,6 +19,7 @@ import traceback
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 from dotenv import load_dotenv
+from fastapi.responses import PlainTextResponse
 
 
 # Configure logging
@@ -746,14 +747,9 @@ async def health_check():
             content={"status": "unhealthy", "error": str(e), "api_key_set": bool(API_KEY)}
         )
 
-
-app.mount("/static", StaticFiles(directory="static"), name="static")
-
-
-@app.get("/")
+@app.get("/", response_class=PlainTextResponse)
 async def serve_home():
-    return FileResponse("static/index.html")
-
+    return "TDS VirtualTA Project"
 
 if __name__ == "__main__":
     uvicorn.run("app:app", host="0.0.0.0", port=8000, reload=True)

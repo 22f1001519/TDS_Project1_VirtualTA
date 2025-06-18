@@ -8,8 +8,6 @@ python-dotenv
 aiohttp
 numpy
 pydantic
-
-
 html2text
 tqdm
 markdown
