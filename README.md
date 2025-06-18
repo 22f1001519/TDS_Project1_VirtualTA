@@ -39,9 +39,9 @@ TDS_Project1_VirtualTA
 ## promptfoo test
 
 Run the promptfoo file provided. 
-
+```
 npx -y promptfoo eval --config project-tds-virtual-ta-promptfoo.yaml
-
+```
 
 **The application will be accessible at** `http://localhost:8000`.
 
