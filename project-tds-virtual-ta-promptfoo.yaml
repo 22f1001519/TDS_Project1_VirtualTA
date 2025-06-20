@@ -20,7 +20,7 @@ defaultTest:
         method: POST
         headers:
           Content-Type: application/json
-          Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6IjIzZjEwMDE5MTFAZHMuc3R1ZHkuaWl0bS5hYy5pbiJ9.0j9Dygxry6JwavbYQyX0qYAX_1ymCgJ-nLPTok5qrRA
+          Authorization: Bearer # Your AI Pipe Token
         body: |
           {
             "model": "gpt-4o-mini",
